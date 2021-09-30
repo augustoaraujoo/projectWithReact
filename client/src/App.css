@@ -27,6 +27,15 @@
   border-radius: 4px;
   text-align: center;
 }
-.buttonAddContainer:hover{
+.buttonAddContainer:hover {
   cursor: pointer;
+}
+.showEmployees {
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: rgb(221, 128, 128);
 }
