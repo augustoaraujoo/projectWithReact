@@ -7,6 +7,7 @@ app.use(express.json());
 const db = mysql.createConnection({
   user: "uuystuqgsamrve",
   host: "ec2-54-209-52-160.compute-1.amazonaws.com",
+  port:'5432',
   password: "7e21d5219724fd0fadc1fb4e643e71304b94f5c4095546a3fcfd9b478a65d5a5",
   database: "dj1g4h5reta9n",
 });
