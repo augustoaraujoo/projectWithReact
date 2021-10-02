@@ -12,7 +12,7 @@ function App() {
   const [employeeList, setEmployeeList] = useState([]);
   
   const addEmployee = () => {
-    Axios.post("https://reactnodemysql.herokuapp.com/create", {
+    Axios.post("http://localhost:3001/create", {
       name: name,
       age: age,
       country: country,
@@ -33,13 +33,13 @@ function App() {
   };
 
   const getEmployees = () => {
-    Axios.get("https://reactnodemysql.herokuapp.com/employees").then((response) => {
+    Axios.get("http://localhost:3001/employees").then((response) => {
       setEmployeeList(response.data);
     });
   };
 
   const updateEmployeeWage = (id) => {
-    Axios.put("https://reactnodemysql.herokuapp.com/update", { wage: newWage, id: id }).then(
+    Axios.put("http://localhost:3001/update", { wage: newWage, id: id }).then(
       (response) => {
         setEmployeeList(
           employeeList.map((val) => {
@@ -60,7 +60,7 @@ function App() {
   };
 
   const deleteEmployee = (id) => {
-    Axios.delete(`https://reactnodemysql.herokuapp.com/delete/${id}`).then((response) => {
+    Axios.delete(`http://localhost:3001/delete/${id}`).then((response) => {
       setEmployeeList(
         employeeList.filter((val) => {
           return val.id !== id;
