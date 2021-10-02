@@ -5,10 +5,10 @@ const cors = require("cors");
 app.use(cors());
 app.use(express.json());
 const db = mysql.createConnection({
-  user: "root",
-  host: "localhost",
-  password: "",
-  database: "employeeSystem",
+  user: "uuystuqgsamrve",
+  host: "ec2-54-209-52-160.compute-1.amazonaws.com",
+  password: "7e21d5219724fd0fadc1fb4e643e71304b94f5c4095546a3fcfd9b478a65d5a5",
+  database: "dj1g4h5reta9n",
 });
 
 app.post("/create", (req, res) => {
